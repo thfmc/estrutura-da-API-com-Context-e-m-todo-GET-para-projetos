@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace Exo.WebApi.Repositories
 {
-while
     public class ProjetoRepository
     {
         private readonly ExoContext _context;
         public ProjetoRepository(ExoContext context)
         {
-             _context = context;
+        _context = context;
         }
         public List<Projeto> Listar()
         {
-             return _context.Projetos.ToList();
+             return _context.Projetos.ToList();  
         }
     
         // Código novo que completa o CRUD.
@@ -42,14 +41,6 @@ while
             _context.Projetos.Update(projetoBuscado);   
             _context.SaveChanges();
         }
-
-    internal class _context
-    {
-        internal static void SaveChanges()
-        {
-            throw new NotImplementedException();
-        }
-    }
 
     public void Deletar(int id)
         {
